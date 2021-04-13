@@ -1,0 +1,10 @@
+<div>
+  <h2>Routes:</h2>
+  <div *ngFor="let x of paths">
+    <a routerLink="{{ x.path }}">{{ x.name }}</a>
+  </div>
+  <app-alert>
+    This is an alert. Learn more about alerts
+    <a href="https://getbootstrap.com/docs/4.5/components/alerts/">here</a>.
+  </app-alert>
+</div>

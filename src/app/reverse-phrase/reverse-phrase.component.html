@@ -1,0 +1,22 @@
+<div class="col-6 mx-auto">
+  <!-- Reverse Part -->
+  <div class="card mt-4">
+    <div class="card-header text-white bg-primary">Reverse Phrase</div>
+    <div class="card-body">
+      <div class="form-group">
+        <label>Text</label>
+        <input (input)="onInputText($event)" class="form-control" />
+      </div>
+      <div class="form-group">
+        <button
+          (click)="onClickReverse()"
+          [disabled]="!text.length"
+          class="btn btn-primary"
+        >
+          Submit
+        </button>
+      </div>
+      <div *ngIf="reversedText.length">Reversed Text: {{ reversedText }}</div>
+    </div>
+  </div>
+</div>
