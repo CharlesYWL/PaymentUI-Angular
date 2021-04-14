@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>Cocktails</h2>
+  <app-form (submitted)="search($event)"></app-form>
+
+  <app-results [drinks]="drinks" [query]="query"></app-results>
+</div>

@@ -5,8 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PipetestComponent } from './pipetest/pipetest.component';
 import { DirectiveTestComponent } from './directive-test/directive-test.component';
 import { ReversePhraseComponent } from './reverse-phrase/reverse-phrase.component';
-import { HomeModule } from './home/home.module';
-import { AboutModule } from './about/about.module';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // const routes: Routes = [];
 const routes: Routes = [
@@ -25,6 +24,11 @@ const routes: Routes = [
       import('./contact/contact.module').then((m) => m.ContactModule),
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'cocktails',
+    loadChildren: () =>
+      import('./cocktails/cocktails.module').then((m) => m.CocktailsModule),
+  },
   { path: 'pipe', component: PipetestComponent },
   { path: 'dt', component: DirectiveTestComponent },
   { path: 'rp', component: ReversePhraseComponent },

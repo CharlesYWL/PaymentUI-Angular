@@ -10,6 +10,7 @@ import { PipetestComponent } from './pipetest/pipetest.component';
 import { DirectiveTestComponent } from './directive-test/directive-test.component';
 import { ReversePhraseComponent } from './reverse-phrase/reverse-phrase.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; // Added here
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReversePhraseComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
