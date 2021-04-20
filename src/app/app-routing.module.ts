@@ -29,6 +29,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./cocktails/cocktails.module').then((m) => m.CocktailsModule),
   },
+  {
+    path: 'email-form',
+    loadChildren: () =>
+      import('./email-form/email-form.module').then((m) => m.EmailFormModule),
+  },
   { path: 'pipe', component: PipetestComponent },
   { path: 'dt', component: DirectiveTestComponent },
   { path: 'rp', component: ReversePhraseComponent },
