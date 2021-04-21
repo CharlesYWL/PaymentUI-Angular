@@ -1,3 +1,4 @@
+import { ComponentsModule } from './components/components.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -24,7 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReversePhraseComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ComponentsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

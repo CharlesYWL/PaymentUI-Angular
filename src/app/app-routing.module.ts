@@ -1,6 +1,4 @@
-import { HomeMainComponent } from './home/home-main/home-main.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PipetestComponent } from './pipetest/pipetest.component';
 import { DirectiveTestComponent } from './directive-test/directive-test.component';
@@ -33,6 +31,10 @@ const routes: Routes = [
     path: 'email-form',
     loadChildren: () =>
       import('./email-form/email-form.module').then((m) => m.EmailFormModule),
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   { path: 'pipe', component: PipetestComponent },
   { path: 'dt', component: DirectiveTestComponent },
