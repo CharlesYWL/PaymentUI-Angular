@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-auth-a564c": {
+      "hosting": {
+        "Angular": [
+          "angular-auth-a564c"
+        ]
+      }
+    }
+  }
+}

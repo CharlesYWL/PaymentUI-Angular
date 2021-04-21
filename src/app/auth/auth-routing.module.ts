@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AuthMainComponent } from './auth-main/auth-main.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: '', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'dashboard', component: DashboardComponent },
     ],
   },
 ];

@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 import { CompromisedPassword } from './../../validators/compromised-password';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -36,8 +38,25 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private match: Match,
-    private compromisedPassword: CompromisedPassword
+    private compromisedPassword: CompromisedPassword,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
+
+  async register() {
+    if (this.registerForm.invalid) {
+      return;
+    }
+
+    const { email, password } = this.registerForm.value;
+
+    try {
+      let result = await this.authService.signUp(email, password);
+      this.router.navigateByUrl('auth/dashboard');
+    } catch (e) {
+      this.registerForm.setErrors({ registrationFailed: true });
+    }
+  }
 }

@@ -7,9 +7,14 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthMainComponent } from './auth-main/auth-main.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 @NgModule({
-  declarations: [AuthMainComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AuthMainComponent,
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,

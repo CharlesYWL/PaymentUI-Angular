@@ -1,14 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
-  <a class="navbar-brand" routerLink="./">Auth</a>
+  <a class="navbar-brand" routerLink="./">{{
+    authService.userData ? authService.userData.email : "Auth"
+  }}</a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="./">Login</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="./register">Register</a>
-      </li>
+      <ng-container *ngIf="authService.userData; else notLoggedIn">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="./dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="./logout">Logout</a>
+        </li>
+      </ng-container>
+      <ng-template #notLoggedIn>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="./">Login</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="./register">Register</a>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>

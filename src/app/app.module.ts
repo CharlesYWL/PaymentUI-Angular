@@ -12,6 +12,10 @@ import { DirectiveTestComponent } from './directive-test/directive-test.componen
 import { ReversePhraseComponent } from './reverse-phrase/reverse-phrase.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; // Added here
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     ComponentsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
