@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-main.component.sass'],
 })
 export class HomeMainComponent implements OnInit {
-  paths = [
-    { path: 'rp', name: 'reverse-phrase' },
-    { path: 'dt', name: 'directive-test' },
-    { path: 'pipe', name: 'pipetest' },
-  ];
+  title = 'Client Contacts Manager';
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -27,4 +27,7 @@
   <div *ngIf="control.errors.pattern" class="invalid-feedback">
     Invaild pattern
   </div>
+  <div *ngIf="!control.errors.email" class="invalid-feedback">
+    Invaild email
+  </div>
 </ng-container>
