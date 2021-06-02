@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <img
+    mat-card-image
+    [src]="item.data.product_data.images[0]"
+    alt="Photo of a Shiba Inu"
+    class="card-img"
+  />
+  <mat-card-content>
+    <div class="card-content">
+      <strong style="font-size: 1rem">
+        {{ item.data.product_data.name }}
+      </strong>
+      <p>{{ this.helper.centToDollar(item.data.unit_amount) }}</p>
+      <div class="buy-buttons">
+        <button mat-button (click)="navigateTo(item.name)">Buy Now</button>
+        <button mat-button>Add to cart</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

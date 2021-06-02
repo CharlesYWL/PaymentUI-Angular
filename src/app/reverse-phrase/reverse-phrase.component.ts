@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reverse-phrase.component.sass'],
 })
 export class ReversePhraseComponent implements OnInit {
-  text = '';
+  text = ''
   reversedText = '';
 
   constructor() {}

@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:p": "ng serve --configuration=production",
+    "start:d": "ng serve --configuration=dev",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -22,6 +24,7 @@
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
+    "@stripe/stripe-js": "^1.15.0",
     "bootstrap": "^4.6.0",
     "crypto-js": "^4.0.0",
     "firebase": "^8.4.1",

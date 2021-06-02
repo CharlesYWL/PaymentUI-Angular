@@ -12,6 +12,7 @@ export const environment = {
     messagingSenderId: '812067632147',
     appId: '1:812067632147:web:c80ab3debdf5e60a02bbe6',
   },
+  apiRoot: 'https://0berox.deta.dev/',
 };
 
 /*

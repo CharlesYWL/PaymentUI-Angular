@@ -201,14 +201,14 @@
     "tslib" "^2.0.0"
     "yargs" "^16.2.0"
 
-"@angular/compiler@>=2.3.1 <12.0.0 || ^11.0.0-next || ^11.1.0-next || ^11.2.0-next", "@angular/compiler@~11.2.9", "@angular/compiler@11.2.9":
+"@angular/compiler@~11.2.9", "@angular/compiler@11.2.9", "@angular/compiler@9.0.0":
   "integrity" "sha512-EelccCc6Xgrz6UzoJU5EqrRc0CGDHS82cheiBP3lSDfjG6borD9al4DN5lfphp+FCmTpLY33wQ3jqhPwC02FMQ=="
   "resolved" "https://registry.npmjs.org/@angular/compiler/-/compiler-11.2.9.tgz"
   "version" "11.2.9"
   dependencies:
     "tslib" "^2.0.0"
 
-"@angular/core@^11.0.0 || ^12.0.0-0", "@angular/core@^9.0.0 || ^10.0.0 || ^11.0.0", "@angular/core@>=2.3.1 <12.0.0 || ^11.0.0-next || ^11.1.0-next || ^11.2.0-next", "@angular/core@~11.2.9", "@angular/core@11.2.9":
+"@angular/core@^11.0.0 || ^12.0.0-0", "@angular/core@^9.0.0 || ^10.0.0 || ^11.0.0", "@angular/core@~11.2.9", "@angular/core@11.2.9", "@angular/core@9.0.0":
   "integrity" "sha512-OLW8ThHdG5XjE9PMdBWyAm19wXEjuhWAB19qCqNerKkk1RGEOn+ISUR5Rpg5Fh3rlI4nFOm+WeOUIaq9uxF53A=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-11.2.9.tgz"
   "version" "11.2.9"
@@ -1599,6 +1599,11 @@
   "integrity" "sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ=="
   "resolved" "https://registry.npmjs.org/@sindresorhus/is/-/is-0.14.0.tgz"
   "version" "0.14.0"
+
+"@stripe/stripe-js@^1.15.0":
+  "integrity" "sha512-KQsNPc+uVQkc8dewwz1A6uHOWeU2cWoZyNIbsx5mtmperr5TPxw4u8M20WOa22n6zmIOh/zLdzEe8DYK/0IjBw=="
+  "resolved" "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.15.0.tgz"
+  "version" "1.15.0"
 
 "@szmarczak/http-timer@^1.1.2":
   "integrity" "sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA=="

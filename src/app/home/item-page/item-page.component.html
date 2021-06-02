@@ -1,0 +1,26 @@
+<div class="product-wrapper">
+  <section *ngIf="!!item && !isLoading">
+    <div class="product">
+      <img
+        [src]="item.data.product_data.images[0]"
+        [alt]="item.name"
+        class="image"
+      />
+      <div class="description">
+        <h3 style="width: fit-content">{{ item.data.product_data.name }}</h3>
+        <h5 style="width: fit-content">
+          {{ this.helper.centToDollar(item.data.unit_amount) }}
+        </h5>
+      </div>
+      <button type="button" class="stripe-btn" (click)="handleClick()">
+        <img class="btn-icon" src="assets/stripe-logo-blue.png" />
+      </button>
+    </div>
+  </section>
+  <section *ngIf="!isLoading && !item">
+    <p>Sorry, item not avaliable</p>
+  </section>
+  <section *ngIf="isLoading">
+    <mat-spinner style="fontsize: 2rem"></mat-spinner>
+  </section>
+</div>
