@@ -5,10 +5,9 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeMainComponent } from './home-main/home-main.component';
 import { ComponentsModule } from '../components/components.module';
-import { CustomMaterialModule } from './custom-meterial.module';
 import { CardComponent } from './card/card.component';
 import { ItemPageComponent } from './item-page/item-page.component';
-
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [HomeMainComponent, CardComponent, ItemPageComponent],
   imports: [
@@ -16,8 +15,8 @@ import { ItemPageComponent } from './item-page/item-page.component';
     ComponentsModule,
     HomeRoutingModule,
     BaseModule,
-    CustomMaterialModule,
     AboutModule,
+    SharedModule,
   ],
 })
 export class HomeModule {}

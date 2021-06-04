@@ -1,0 +1,36 @@
+.product-wrapper {
+  width: 300px;
+  height: 600px;
+  margin: auto;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.btn-icon {
+  height: 35px;
+  object-fit: scale-down;
+}
+
+.stripe-btn {
+  background-color: white !important;
+  margin: auto;
+  width: 100%;
+}

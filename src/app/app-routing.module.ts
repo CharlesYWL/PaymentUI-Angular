@@ -5,6 +5,8 @@ import { DirectiveTestComponent } from './directive-test/directive-test.componen
 import { ReversePhraseComponent } from './reverse-phrase/reverse-phrase.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 // const routes: Routes = [];
 const routes: Routes = [
   {
@@ -39,6 +41,8 @@ const routes: Routes = [
   { path: 'pipe', component: PipetestComponent },
   { path: 'dt', component: DirectiveTestComponent },
   { path: 'rp', component: ReversePhraseComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'order', component: OrderComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -1,0 +1,18 @@
+<div>
+  <div *ngIf="success; else else_block">
+    <div>Thanks for you Order</div>
+    <div>Please Review them in Email</div>
+    <div className="cursor-pointer"></div>
+    <a routerLink="/">
+      <button mat-raised-button color="primary">Back to home</button>
+    </a>
+  </div>
+  <ng-template #else_block>
+    <div>
+      <div>Somethings goes wrong with Order</div>
+      <button mat-raised-button color="primary" (click)="back()">
+        click back
+      </button>
+    </div></ng-template
+  >
+</div>

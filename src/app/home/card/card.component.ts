@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HelperService } from '@services/helper.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CartService } from '@services/cart.service';
 
 export interface GoodDetail {
   name: string;
@@ -27,7 +28,8 @@ export class CardComponent implements OnInit {
   constructor(
     public helper: HelperService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public cartService: CartService
   ) {}
 
   ngOnInit(): void {}

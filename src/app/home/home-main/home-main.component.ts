@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ApiUtiService } from '@services/api-uti.service';
-import { CartService } from '@services/cart.service';
 
 @Component({
   selector: 'app-home-main',
   templateUrl: './home-main.component.html',
   styleUrls: ['./home-main.component.sass'],
-  providers: [ApiUtiService, CartService],
+  providers: [ApiUtiService],
 })
 export class HomeMainComponent implements OnInit {
+  @Output() addToCart = new EventEmitter<string>();
   itemList = [];
 
   constructor(private api: ApiUtiService) {}
@@ -17,5 +17,8 @@ export class HomeMainComponent implements OnInit {
     this.api.getGoods().subscribe((data: any) => {
       this.itemList = data.itemList;
     });
+  }
+  onAddToCart(item: string) {
+    this.addToCart.emit(item);
   }
 }

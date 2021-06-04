@@ -13,7 +13,9 @@
       <p>{{ this.helper.centToDollar(item.data.unit_amount) }}</p>
       <div class="buy-buttons">
         <button mat-button (click)="navigateTo(item.name)">Buy Now</button>
-        <button mat-button>Add to cart</button>
+        <button mat-button (click)="this.cartService.addToCart(item.name)">
+          Add to cart
+        </button>
       </div>
     </div>
   </mat-card-content>

@@ -8,16 +8,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.HomeMainComponent = void 0;
 var core_1 = require("@angular/core");
+var api_uti_service_1 = require("@services/api-uti.service");
 var HomeMainComponent = /** @class */ (function () {
-    function HomeMainComponent() {
-        this.title = 'Client Contacts Manager';
+    function HomeMainComponent(api) {
+        this.api = api;
+        this.addToCart = new core_1.EventEmitter();
+        this.itemList = [];
     }
-    HomeMainComponent.prototype.ngOnInit = function () { };
+    HomeMainComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.api.getGoods().subscribe(function (data) {
+            _this.itemList = data.itemList;
+        });
+    };
+    HomeMainComponent.prototype.onAddToCart = function (item) {
+        this.addToCart.emit(item);
+    };
+    __decorate([
+        core_1.Output()
+    ], HomeMainComponent.prototype, "addToCart");
     HomeMainComponent = __decorate([
         core_1.Component({
             selector: 'app-home-main',
             templateUrl: './home-main.component.html',
-            styleUrls: ['./home-main.component.sass']
+            styleUrls: ['./home-main.component.sass'],
+            providers: [api_uti_service_1.ApiUtiService]
         })
     ], HomeMainComponent);
     return HomeMainComponent;

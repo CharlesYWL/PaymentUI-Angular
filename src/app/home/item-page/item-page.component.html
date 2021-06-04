@@ -12,7 +12,11 @@
           {{ this.helper.centToDollar(item.data.unit_amount) }}
         </h5>
       </div>
-      <button type="button" class="stripe-btn" (click)="handleClick()">
+      <button
+        mat-raised-button
+        class="p-px-3 stripe-btn"
+        (click)="handleClick()"
+      >
         <img class="btn-icon" src="assets/stripe-logo-blue.png" />
       </button>
     </div>

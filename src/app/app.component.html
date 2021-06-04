@@ -4,17 +4,31 @@
   </a>
 
   <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/cart">Cart</a>
-      </li>
-    </ul>
+    <div class="navbar-nav mr-auto my-navbar">
+      <a class="nav-link" routerLink="/">
+        <button mat-raised-button color="primary" class="btn">
+          <mat-icon>home</mat-icon> <span> Home</span>
+        </button></a
+      >
+      <a class="nav-link" routerLink="/about">
+        <button mat-raised-button color="primary">
+          <mat-icon>info</mat-icon>
+          <span>About</span>
+        </button></a
+      >
+      <a class="nav-link" routerLink="/cart">
+        <button
+          mat-raised-button
+          color="primary"
+          [matBadge]="this.cartService.cartNumber()"
+          matBadgeColor="accent"
+        >
+          <mat-icon>shopping_cart</mat-icon>
+
+          <span>Cart</span>
+        </button></a
+      >
+    </div>
   </div>
 </nav>
 

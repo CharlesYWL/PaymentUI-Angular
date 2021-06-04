@@ -1,0 +1,60 @@
+<div>
+  <div class="cart-wrapper" *ngIf="cartDetails.length !== 0">
+    <div class="cart-title">Shopping Cart</div>
+    <hr />
+    <div
+      class="item-wrapper"
+      *ngFor="let item of cartDetails"
+      key="`${item.name}${item.quantity}`"
+    >
+      <div class="item">
+        <div class="item-img">
+          <img [src]="item.data.product_data.images[0]" />
+        </div>
+        <div class="item-info">
+          <div class="item-name">{{ item.data.product_data.name }}</div>
+          <div class="item-bot">
+            <div class="item-bot-left">
+              <div
+                class="item-btn"
+                (click)="this.cartService.addToCart(item.name)"
+              >
+                <mat-icon>add</mat-icon>
+              </div>
+              <p>{{ item.quantity }}</p>
+              <div
+                class="item-btn"
+                (click)="this.cartService.removeFromCart(item.name)"
+              >
+                <mat-icon>remove</mat-icon>
+              </div>
+            </div>
+            <div class="item-bot-right">
+              {{
+                this.helper.centToDollar(
+                  (item.quantity * item.data.unit_amount).toString()
+                )
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="cart-subtotal">
+      <p>Subtotal</p>
+      <p>{{ this.helper.centToDollar(totalPrice().toString()) }}</p>
+    </div>
+    <button mat-raised-button class="p-px-3 stripe-btn" (click)="handleClick()">
+      <img class="btn-icon" src="assets/stripe-logo-blue.png" />
+    </button>
+  </div>
+  <div *ngIf="cartDetails.length === 0" class="cart-wrapper">
+    <div class="cart-title">Shopping Cart</div>
+    <hr />
+    <span>
+      No Items in cart, plase go
+      <a routerLink="/home">home page</a>
+    </span>
+  </div>
+</div>

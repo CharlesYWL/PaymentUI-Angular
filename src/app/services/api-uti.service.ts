@@ -42,4 +42,25 @@ export class ApiUtiService {
         }
       );
   }
+  async checkout(cartDetails) {
+    let new_line_items = cartDetails.map((x) => {
+      return { id: x.name.toLowerCase(), quantity: x.quantity };
+    });
+    let stripe = await this.stripePromise;
+    return this.http
+      .post(this.apiRoot + 'stripe/create-checkout-session', {
+        items: new_line_items,
+        target: 'angular',
+      })
+      .subscribe(
+        (session: any) => {
+          return stripe.redirectToCheckout({
+            sessionId: session.id,
+          });
+        },
+        (error) => {
+          console.log('stripe checkout error:', error);
+        }
+      );
+  }
 }
