@@ -49,12 +49,21 @@
       <img class="btn-icon" src="assets/stripe-logo-blue.png" />
     </button>
   </div>
-  <div *ngIf="cartDetails.length === 0" class="cart-wrapper">
+  <div
+    *ngIf="cartDetails.length === 0 && this.helper.objectKeysLen(cart) === 0"
+    class="cart-wrapper"
+  >
     <div class="cart-title">Shopping Cart</div>
     <hr />
     <span>
       No Items in cart, plase go
       <a routerLink="/home">home page</a>
     </span>
+  </div>
+  <div
+    *ngIf="cartDetails.length === 0 && this.helper.objectKeysLen(cart) !== 0"
+    class="cart-wrapper"
+  >
+    <mat-spinner value="primary"></mat-spinner>
   </div>
 </div>
